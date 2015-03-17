@@ -85,19 +85,18 @@ int main(){
                     else if (!strcmp(cmdb, "QUIT")) {
                         foo->cmd = QUIT;
                     }
-                                                                                else if (!strcmp(cmdb, "RETR" )) {
-                                                                                            cmd.num = RETR;
-                                                                                                }
-                                                                                                    else {
-                                                                                                                cmd.num = UNKNOWN;
-                                                                                                                    }
+                    else if (!strcmp(cmdb, "RETR" )) {
+                        cmd.num = RETR;
+                    }
+                    else {
+                        cmd.num = UNKNOWN;
+                   }
 
                 }
             }while(foo->cmd != QUIT);
             close(hostd);
         }while(1); 
-        close(sockd);/*Not reached .
-        Have to do something on this*/
+        close(sockd);/*Not reached*/
         wait();                                                  
     }
     return 0;
